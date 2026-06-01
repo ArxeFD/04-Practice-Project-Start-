@@ -1,0 +1,12 @@
+name: test-n-stuff
+on: push
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Install repository
+        uses: actions/checkout@v6
+      - name: Install dependencies
+        run: npm ci
+      - name: Test da code ma frend
+        run: npm test
