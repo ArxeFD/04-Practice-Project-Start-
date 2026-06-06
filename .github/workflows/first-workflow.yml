@@ -13,5 +13,9 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
+      - name: Install repository
+        uses: actions/checkout@v6
+      - name: Install dependencies
+        run: npm ci
       - name: Building command
         run: npm run build
