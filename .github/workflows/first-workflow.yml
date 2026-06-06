@@ -10,3 +10,8 @@ jobs:
         run: npm ci
       - name: Test da code ma frend
         run: npm test
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Building command
+        run: npm build
