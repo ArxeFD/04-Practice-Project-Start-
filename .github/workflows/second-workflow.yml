@@ -1,0 +1,8 @@
+name: issues-n-stuff
+on: push
+jobs:
+  issues_event:
+    runs-on: ubuntu-latest
+    steps:
+      - name: lint command
+        run: echo "${{github.event.issue}}"
