@@ -1,8 +1,8 @@
 name: issues-n-stuff
-on: push
+on: issues
 jobs:
   issues_event:
     runs-on: ubuntu-latest
     steps:
       - name: lint command
-        run: echo "${{toJSON(github.event.issue)}}"
+        run: echo "${{toJSON(github.event)}}"
